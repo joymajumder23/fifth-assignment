@@ -13,16 +13,18 @@
     <link rel="stylesheet" href="styles/style.css">
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                'green': '#1DD100',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'green': '#1DD100',
+                        'yellow': '#FFBF0F',
+                        'pink': '#F78C9C',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
 
 <body class="">
@@ -67,13 +69,16 @@
         <section class="relative">
             <div class="hero lg:h-[550px]" style="background-image: url(images/banner.png);">
                 <div class="hero-content text-center text-neutral-content font-raleway">
-                  <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-green">P Paribahan</span></h3></h1>
-                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
-                    <button class="btn bg-green text-black font-bold border-none">Buy Now</button>
-                  </div>
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-green">P
+                                Paribahan</span></h3>
+                        </h1>
+                        <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
+                            integrated testing features allow for a streamlined.</p>
+                        <button class="btn bg-green text-black font-bold border-none">Buy Now</button>
+                    </div>
                 </div>
-              </div>
+            </div>
             <!-- <div class="bg-[url('images/banner.png')] bg-no-repeat lg:h-[550px] text-center p-20 font-raleway">
                 <h3 class="text-6xl font-extrabold text-white">End-to-End Travel with <br> <span class="text-green">P Paribahan</span></h3>
                 <p class="mt-4 mx-60 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
@@ -110,10 +115,50 @@
             </div>
         </section>
     </header>
-    <main>
-        <section class="font-raleway">
+    <main class="lg:w-[1173px] mx-auto">
+        <section class="font-raleway mt-32">
             <h1 class="text-4xl font-bold text-center">Best Offer for You</h1>
-            <button class="btn bg-white border border-green text-green flex  justify-center">See All Offers</button>
+            <div class="lg:flex flex-row gap-6 mt-4 lg:mt-12 mb-4 lg:mb-16">
+                <!-- card 1 -->
+                <div class="card w-full bg-yellow shadow-xl">
+                    <div class="flex">
+                        <!-- text 1 -->
+                        <div class="p-12">
+                            <h2 class="card-title font-extrabold text-3xl">15% OFF</h2>
+                            <p class="font-extrabold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <!-- divider -->
+                        <img src="images/cupon-devider.png" alt="">
+                        <!-- text 2 -->
+                        <div class="p-12">
+                            <h2 class="card-title text-3xl font-bold">New 15</h2>
+                            <p>cupon code</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="card w-full bg-pink shadow-xl">
+                    <div class="flex">
+                        <!-- text 1 -->
+                        <div class="p-12">
+                            <h2 class="card-title font-extrabold text-3xl">20% OFF</h2>
+                            <p class="font-extrabold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <!-- divider -->
+                        <img src="images/cupon-devider.png" alt="">
+                        <!-- text 2 -->
+                        <div class="p-12">
+                            <h2 class="card-title text-3xl font-bold">Couple 20</h2>
+                            <p>cupon code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn bg-white border border-green text-green">See All Offers</button>
+            </div>
         </section>
     </main>
     <footer>

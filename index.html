@@ -25,9 +25,9 @@
       </script>
 </head>
 
-<body class="font-raleway">
+<body class="">
     <header class="lg:w-[1173px] mx-auto">
-        <nav>
+        <nav class="font-raleway">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
@@ -64,16 +64,57 @@
                 </div>
             </div>
         </nav>
-        <section class="">
-            <div class="bg-[url('images/banner.png')] bg-no-repeat lg:h-[550px] text-center p-20">
+        <section class="relative">
+            <div class="hero lg:h-[550px]" style="background-image: url(images/banner.png);">
+                <div class="hero-content text-center text-neutral-content font-raleway">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-green">P Paribahan</span></h3></h1>
+                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+                    <button class="btn bg-green text-black font-bold border-none">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+            <!-- <div class="bg-[url('images/banner.png')] bg-no-repeat lg:h-[550px] text-center p-20 font-raleway">
                 <h3 class="text-6xl font-extrabold text-white">End-to-End Travel with <br> <span class="text-green">P Paribahan</span></h3>
                 <p class="mt-4 mx-60 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
                 <button class="btn mt-8 bg-green text-black text-xl font-bold py-2 px-6 border-none">Buy Ticket</button>
+            </div> -->
+            <div class="lg:flex gap-6 justify-center -mt-16">
+                <div class="flex gap-4 bg-white rounded-3xl p-8 border-b-4 border-green">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">500K+</h3>
+                        <p>Registered users</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 bg-white rounded-3xl p-8 border-b-4 border-green">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">1.7 lacks</h3>
+                        <p>Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 bg-white rounded-3xl p-8 border-b-4 border-green">
+                    <div>
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="text-4xl font-bold font-inter">80K+</h3>
+                        <p>Rental partners</p>
+                    </div>
+                </div>
             </div>
         </section>
     </header>
     <main>
-
+        <section class="font-raleway">
+            <h1 class="text-4xl font-bold text-center">Best Offer for You</h1>
+            <button class="btn bg-white border border-green text-green flex  justify-center">See All Offers</button>
+        </section>
     </main>
     <footer>
 

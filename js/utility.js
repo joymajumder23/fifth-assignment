@@ -36,7 +36,7 @@ function disabled(id) {
 
 }
 
-function enable(id) {
+function enabled(id) {
     document.getElementById(id).disabled = false;
 }
 

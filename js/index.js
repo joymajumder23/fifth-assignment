@@ -1,4 +1,4 @@
-function buyNow(){
+function buyNow() {
     const travel = document.getElementById('travels');
     travel.scrollIntoView({ behavior: "smooth" });
 }
@@ -24,6 +24,7 @@ function buyNow(){
 // document.addEventListener('click', handleClickEvent);
 const seatPlan = document.getElementById('seat-plan');
 const seats = seatPlan.querySelectorAll('.btn');
+
 let seatCount = 0;
 let totalPrice = 0;
 let grandPrice = 0;
@@ -36,7 +37,6 @@ for (i = 0; i < seats.length; i++) {
         allSeat.classList.add('bg-green');
 
         if (seatCount < 4) {
-
             const addElement = document.getElementById('list-container');
             addElement.classList.add('space-y-4');
             const div = document.createElement('div');
@@ -54,7 +54,7 @@ for (i = 0; i < seats.length; i++) {
             div.appendChild(p2);
 
             const currentSeat = getTextValueElementById('total-seat');
-            console.log(currentSeat);
+            console.log(typeof currentSeat);
 
             const updatedSeat = currentSeat + 1;
             setTextElementById('total-seat', updatedSeat);
@@ -64,61 +64,58 @@ for (i = 0; i < seats.length; i++) {
 
             const leftSeat = availableSeat - 1;
             setTextElementById('available-seat', leftSeat);
-            
+
             totalPrice = totalPrice + 550;
             setTextElementById('total-price', totalPrice);
 
             grandPrice = totalPrice;
             setTextElementById('grand-price', grandPrice);
-        }
-
-       else if ((seatCount === 4)) {
-            // console.log('error');
-            enable('coupon-btn');
-            alert('Your Highest selection is 4 tickets!');
 
         }
-        // else {
-        //     enable('coupon-btn');
-        //     console.log('error');
-        // }
-
-        if (seatCount > 0) {
-            enable('next-btn');
+        if (seatCount < 5) {
+            console.log(typeof seatCount);
+            enabled('coupon-btn');
+            alert('Maximum 4 tickets');
+            return;
         }
-    });
+        if (seatCount < 0) {
+            enabled('next-btn');
+        }
+
+    })
 }
 
 
-        const couponBtn = document.getElementById('coupon-btn');
-        couponBtn.addEventListener('click', function () {
+const couponBtn = document.getElementById('coupon-btn');
+couponBtn.addEventListener('click', function () {
 
-            const couponCode = document.getElementById('input').value;
+    const couponCode = document.getElementById('input').value;
 
-            if (couponCode === 'NEW15') {
-                let coupon1 = (totalPrice * 15) / 100;
+    if (couponCode === 'NEW15') {
+        let coupon1 = (totalPrice * 15) / 100;
 
-                grandInPrice = grandPrice - coupon1;
+        grandInPrice = grandPrice - coupon1;
 
-                setTextElementById('grand-price', grandInPrice);
-                document.getElementById('input-field').classList.add('hidden');
-            }
-            else if (couponCode === 'Couple20') {
-                const coupon2 = (totalPrice * 20) / 100;
-                grandTotalPrice = grandPrice - coupon2;
-                setTextElementById('grand-price', grandTotalPrice);
-                document.getElementById('input-field').classList.add('hidden');
-            }
-            else {
-                alert('Invalid Code! Please Enter a Valid Coupon Code')
-            }
-        });
+        setTextElementById('grand-price', grandInPrice);
+        document.getElementById('input-field').classList.add('hidden');
+    }
+    else if (couponCode === 'Couple20') {
+        const coupon2 = (totalPrice * 20) / 100;
+        grandTotalPrice = grandPrice - coupon2;
+        setTextElementById('grand-price', grandTotalPrice);
+        document.getElementById('input-field').classList.add('hidden');
+        return;
+    }
+    else {
+        alert('Invalid Code! Please Enter a Valid Coupon Code')
+    }
+})
 
-        const phoneNumber = document.getElementById('phone-number');
-        phoneNumber.addEventListener('input', function () {
-            const numberValue = parseInt(phoneNumber.value);
-            if (seatCount > 0 && numberValue > -1) {
-                enableBtn('next-btn');
-            }
+const phoneNumber = document.getElementById('phone-number');
+phoneNumber.addEventListener('input', function () {
+    const numberValue = parseInt(phoneNumber.value);
+    if (seatCount > 0 && numberValue > -1) {
+        enableBtn('next-btn');
+    }
 
-        });
+})

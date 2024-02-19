@@ -21,6 +21,7 @@
                         'yellow': '#FFBF0F',
                         'pink': '#F78C9C',
                         'ash': '#F7F8F8',
+                        'blue': '#030712',
                     }
                 }
             }
@@ -81,12 +82,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="bg-[url('images/banner.png')] bg-no-repeat lg:h-[550px] text-center p-20 font-raleway">
-                <h3 class="text-6xl font-extrabold text-white">End-to-End Travel with <br> <span class="text-green">P Paribahan</span></h3>
-                <p class="mt-4 mx-60 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
-                <button class="btn mt-8 bg-green text-black text-xl font-bold py-2 px-6 border-none">Buy Ticket</button>
-            </div> -->
-            <div class="lg:flex gap-6 justify-center -mt-16">
+            <div class="lg:flex gap-6 justify-center lg:-mt-16">
                 <div class="flex gap-4 bg-white rounded-3xl p-8 border-b-4 border-green">
                     <div>
                         <img src="images/people.png" alt="">
@@ -163,16 +159,16 @@
             </div>
         </section>
         <section id="travels"
-            class="font-raleway mt-32 bg-ash border-t-2 rounded-t-3xl lg:rounded-t-[88px] border-green">
+            class="mt-32 bg-ash border-t-2 rounded-t-3xl lg:rounded-t-[88px] border-green">
             <div class="lg:w-[1173px] mx-auto mt-32">
                 <h1 class="text-4xl font-bold text-center">JR Travels</h1>
                 <p class="text-center mt-6">Yes, you can run unit tests and view the results directly within the app.
                     The integrated testing features allow for a streamlined.</p>
-                <div class="flex gap-8 bg-white mt-12 rounded-3xl">
+                <div class="lg:flex gap-8 bg-white mt-12 rounded-3xl">
                     <!-- 1st part -->
                     <div class="p-8">
-                        <div class="flex gap-56">
-                            <div class="flex gap-3">
+                        <div class="lg:flex gap-56">
+                            <div class="flex gap-3 font-inter">
                                 <img src="images/bus-logo.png" alt="">
                                 <div>
                                     <h3 class="text-3xl font-bold">GreenLine Paribahan</h3>
@@ -190,7 +186,7 @@
                             <div class="border-dashed border-b mb-6">
                                 <h1 class="pb-6">Departure Time</h1>
                             </div>
-                            <div class="flex gap-6">
+                            <div class="lg:flex gap-6">
                                 <button class="btn">Boarding Point - Laxmipur</button>
                                 <button class="btn">Dropping Point - Bogura</button>
                                 <button class="btn">Est. Time - 11 Hour</button>
@@ -199,7 +195,7 @@
                     </div>
                     <!-- 2nd part -->
                     <div>
-                        <img src="images/info-devider.png" alt="">
+                        <img class="w-3 lg:w-full" src="images/info-devider.png" alt="">
                     </div>
                     <!-- 3rd part -->
                     <div class="lg:mt-32 items-center">
@@ -210,7 +206,7 @@
                 </div>
                 <!-- Ticket section -->
                 <section class="mt-6 bg-white rounded-3xl p-8">
-                    <div class="flex gap-16 justify-around">
+                    <div class="lg:flex gap-16 justify-around">
                         <!-- Seat plan -->
                         <div id="seat-plan">
                             <h3>Select your seat</h3>
@@ -218,10 +214,10 @@
                                 <p class="flex"><img src="images/seat-gray.png" alt=""> Available</p>
                                 <p class="flex"><img src="images/seat-green-filled.png" alt=""> Selected</p>
                             </div>
-                            <div class="bg-ash rounded-3xl p-4 justify-end flex"><img src="images/Vector.png" alt="">
+                            <div class="bg-ash rounded-3xl p-4 mb-4 w-20 justify-end text-end ml-72 flex"><img src="images/Vector.png" alt="">
                             </div>
                             <div class="flex gap-12">
-                                <!-- <div class="grid grid-cols-3 gap-4 items-center">
+                                <div class="grid grid-cols-3 gap-4 items-center">
                                     <div>A</div>
                                     <div id="a" class="btn bg-ash rounded-2xl p-4">A1</div>
                                     <div id="a" class="btn bg-ash rounded-2xl p-4">A2</div>
@@ -274,8 +270,8 @@
                                         <div id="a" class="btn bg-ash rounded-2xl p-4">I4</div>
                                         <div id="a" class="btn bg-ash rounded-2xl p-4">J3</div>
                                         <div id="a" class="btn bg-ash rounded-2xl p-4">J4</div>
-                                    </div> -->
-                                <div class="flex">
+                                    </div>
+                                <!-- <div class="flex">
                                     <div>
                                         <div class="space-y-11 mt-10 inter-font font-medium text-lg">
                                             <p>A</p>
@@ -378,7 +374,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- <div class="">
@@ -541,7 +537,7 @@
                             <div class="bg-ash rounded-xl p-8">
                                 <div class="overflow-x-auto">
                                     <div class="flex justify-between font-bold">
-                                        <p>Seat <span id="total-seat" class="bg-green">0</span></p>
+                                        <p>Seat <span id="total-seat" class="bg-green p-2 rounded-xl text-x">0</span></p>
                                         <p>Class</p>
                                         <p>Price</p>
                                     </div>
@@ -601,7 +597,7 @@
                                         class="input input-bordered w-full max-w-xs" />
                                 </label>
                                 <button id="next-btn" onclick="my_modal_1.showModal()"
-                                    class="btn bg-green w-full mt-6 rounded-xl" disabled>Next</button>
+                                    class="btn bg-green w-full mt-6 rounded-xl">Next</button>
                                 <!-- Open the modal using ID.showModal() method -->
                                 <dialog id="my_modal_1" class="modal">
                                     <div class="modal-box flex flex-col text-center justify-center">
@@ -618,17 +614,37 @@
                                         </div>
                                     </div>
                                 </dialog>
+                                <div class="flex gap-10">
+                                    <a href="">Terms and Conditions</a>
+                                    <a href="">Cancellation Policy</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
             </div>
         </section>
         </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="bg-blue p-12 lg:py-32 space-y-16">
+        <div class="lg:flex justify-between lg:w-[1173px] mx-auto">
+            <div class="text-white">
+                <h3 class="text-4xl font-semibold font-inter">JR-Travels</h3>
+                <p class="py-5">JR-Travels is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div>
+                <p class="text-xl font-semibold text-white py-5">Download our app</p>
+                <img class="w-[189px] h-[56px]" src="images/play-store.png" alt="">
+            </div>
+        </div>
+        <div class="lg:flex lg:gap-72 lg:w-[1173px] mx-auto text-white border-dashed border-t-2 py-8">
+            <p>@all rights reserved, JR-Travels services limited.2024</p>
+            <div class="lg:flex lg:justify-around lg:gap-8">
+                <p>Terms & condition</p>
+                <p>Return & refund policy</p>
+                <p>Privacy policy</p>
+            </div>
+        </div>
     </footer>
     <script src="js/utility.js"></script>
     <script src="js/index.js"></script>

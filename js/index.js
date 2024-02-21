@@ -3,9 +3,9 @@ function buyNow() {
     travel.scrollIntoView({ behavior: "smooth" });
 }
 
-let seatCount = 0;
 let totalPrice = 0;
 let grandPrice = 0;
+let seatsCount = 0;
 
 const seatPlan = document.getElementById('seat-plan');
 const seats = seatPlan.querySelectorAll('.btn');
@@ -13,11 +13,32 @@ const seats = seatPlan.querySelectorAll('.btn');
 for (i = 0; i < seats.length; i++) {
     let allSeat = seats[i];
     allSeat.addEventListener('click', function () {
-
+        
         allSeat.classList.add('pointer-events-none');
+        
+        let seatsTotal = document.getElementById('total-seat');
+            const intSeat = seatsTotal.innerText;
+            
+            const seatsCount = parseInt(intSeat);
+            console.log(seatsCount);
+            
+            if (seatsCount >= 4) {
+                // console.log(typeof seatsCount);
+                // console.log(seatsCount);
+                enabled('coupon-btn');
+                alert('Maximum 4 tickets');
+                return; 
+            }
+            // if (seatsCount > 0) {
+            //     console.log( seatsCount);
+            //     enabled('next-btn');
+            // }
+
+           
         allSeat.classList.add('bg-green');
 
-        if (seatCount < 4) {
+        if (seatsCount < 4) {
+            
             const addElement = document.getElementById('list-container');
     
             const tr = document.createElement('tr');
@@ -35,9 +56,7 @@ for (i = 0; i < seats.length; i++) {
 
             // const thId = getTextValueElementById('th-id');
             // console.log(typeof thId);
-
-          
-            // setTextElementById('th-id', updatedThId);
+    
 
             const currentSeat = getTextValueElementById('total-seat');
             console.log(typeof currentSeat);
@@ -56,18 +75,11 @@ for (i = 0; i < seats.length; i++) {
 
             grandPrice = totalPrice;
             setTextElementById('grand-price', grandPrice);
+            
 
         }
-        if (seatCount < 5) {
-            console.log(typeof seatCount);
-            enabled('coupon-btn');
-            alert('Maximum 4 tickets');
-            return;
-        }
-        if (seatCount < 0) {
-            enabled('next-btn');
-        }
-
+        
+        
     })
 }
 
@@ -97,11 +109,23 @@ couponBtn.addEventListener('click', function () {
     }
 })
 
-const phoneNumber = document.getElementById('phone-number');
-phoneNumber.addEventListener('input', function () {
-    const numberValue = parseInt(phoneNumber.value);
-    if (seatCount > 0 && numberValue > -1) {
-        enableBtn('next-btn');
-    }
+// const phoneNumber = document.getElementById('phone-number');
+// phoneNumber.addEventListener('input', function () {
+//     const numberValue = parseInt(phoneNumber.value);
+//     if (seatsCount > 0 && numberValue > -1) {
+//         console.log(numberValue);
+//         enabled('next-btn');
+//     }
 
+// })
+
+document.getElementById('phone-number').addEventListener('keyup', function(event){
+    const inputText = event.target.value;
+    const nextBtn = document.getElementById('next-btn');
+    if(inputText.length === 11){
+        nextBtn.removeAttribute('disabled');
+    }
+    else{
+        nextBtn.setAttribute('disabled', true);
+    }
 })

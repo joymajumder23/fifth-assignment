@@ -2,31 +2,13 @@ function buyNow() {
     const travel = document.getElementById('travels');
     travel.scrollIntoView({ behavior: "smooth" });
 }
-// function handleClickEvent(event){
-//     const select = event.target.childNodes;
-//     console.log(select);
-//     setBackgroundColor('a');
-//     removeBackgroundColor('a');
 
-//     const currentSeat = getTextValueElementById('total-seat');
-//         console.log(currentSeat);
-
-//         const updatedSeat = currentSeat + 1;
-//         setTextElementById('total-seat', updatedSeat);
-
-//     const availableSeat = getTextValueElementById('available-seat');
-//         console.log(availableSeat);
-
-//         const leftSeat = availableSeat - 1;
-//         setTextElementById('available-seat', leftSeat);
-// }
-
-// document.addEventListener('click', handleClickEvent);
-const seatPlan = document.getElementById('seat-plan');
-const seats = seatPlan.querySelectorAll('.btn');
 let seatCount = 0;
 let totalPrice = 0;
 let grandPrice = 0;
+
+const seatPlan = document.getElementById('seat-plan');
+const seats = seatPlan.querySelectorAll('.btn');
 
 for (i = 0; i < seats.length; i++) {
     let allSeat = seats[i];

@@ -24,7 +24,6 @@ function buyNow() {
 // document.addEventListener('click', handleClickEvent);
 const seatPlan = document.getElementById('seat-plan');
 const seats = seatPlan.querySelectorAll('.btn');
-
 let seatCount = 0;
 let totalPrice = 0;
 let grandPrice = 0;
@@ -38,20 +37,25 @@ for (i = 0; i < seats.length; i++) {
 
         if (seatCount < 4) {
             const addElement = document.getElementById('list-container');
-            addElement.classList.add('space-y-4');
-            const div = document.createElement('div');
-            div.classList.add('flex');
-            div.classList.add('justify-around');
-            addElement.appendChild(div);
-            const p = document.createElement('p');
-            p.innerText = allSeat.innerText;
-            const p1 = document.createElement('p');
-            p1.innerText = 'Economy';
-            const p2 = document.createElement('p');
-            p2.innerText = '550';
-            div.appendChild(p);
-            div.appendChild(p1);
-            div.appendChild(p2);
+    
+            const tr = document.createElement('tr');
+            const tdSeat = document.createElement('td');
+            tdSeat.innerText = allSeat.innerText;
+            const tdClass = document.createElement('td');
+            tdClass.innerText = 'Economy';
+            const tdPrice = document.createElement('td');
+            tdPrice.innerText = '550';
+
+            tr.appendChild(tdSeat);
+            tr.appendChild(tdClass);
+            tr.appendChild(tdPrice);
+            addElement.appendChild(tr);
+
+            // const thId = getTextValueElementById('th-id');
+            // console.log(typeof thId);
+
+          
+            // setTextElementById('th-id', updatedThId);
 
             const currentSeat = getTextValueElementById('total-seat');
             console.log(typeof currentSeat);

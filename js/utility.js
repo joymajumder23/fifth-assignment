@@ -19,28 +19,17 @@ function setTextElementById(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
-// function setBackgroundColor(setId){
-//     const backgroundColor = document.getElementById(setId);
-//     backgroundColor.classList.add('bg-green-500');
-// }
-// function removeBackgroundColor(setId){
-//     const backgroundColor = document.getElementById(setId);
-//     backgroundColor.classList.remove('bg-ash');
-// }
-// function setInnerText(id, value) {
-//     document.getElementById(id).innerText = value;
-// }
 
-function disabled(id) {
-    document.getElementById(id).disabled = true;
+function disabled(elementId) {
+    document.getElementById(elementId).disabled = true;
 
 }
 
-function enabled(id) {
-    document.getElementById(id).disabled = false;
+function enabled(elementId) {
+    document.getElementById(elementId).disabled = false;
 }
 
-// function enableBtn(id){
+// function enableBtn(elementId){
 //     const btn = document.getElementById(id);
 //     btn.removeAttribute('disabled');
 // }
